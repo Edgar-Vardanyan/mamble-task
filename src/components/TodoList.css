@@ -1,0 +1,90 @@
+.empty-todo-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 80px;
+}
+
+.empty-todo-text h2 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.2px;
+  text-transform: capitalize;
+  margin-top: 140px;
+  color: #acacac;
+}
+
+.empty-todo-text h1 {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 54px;
+  letter-spacing: 0.002em;
+  text-transform: capitalize;
+  color: #666666;
+}
+
+.show-none {
+  display: none;
+}
+
+.hide-completed {
+  display: flex;
+  justify-content: flex-end;
+  font-weight: 500;
+  margin-bottom: 80px;
+  font-size: 18px;
+  line-height: 27px;
+  text-transform: capitalize;
+  color: #000000;
+}
+
+.hide-completed input {
+  width: 18px;
+  accent-color: #008594;
+  margin-right: 15px;
+}
+
+.wrapper {
+  max-width: 1180px;
+  min-width: 406px;
+  width: calc(100% - 230px);
+}
+
+.todo-wrapper:last-child {
+  border: none;
+}
+
+.todo-wrapper {
+  padding: 0 220px 0 80px;
+  width: calc(100% - 80px);
+}
+
+@media only screen and (max-width: 600px) {
+  .todo-wrapper {
+    min-width: 360px;
+    padding: 0px 24px 0 24px;
+  }
+
+  .empty-todo-text {
+    padding-left: 30px;
+  }
+
+  .empty-todo-text h2 {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.2px;
+    white-space: nowrap;
+  }
+
+  .empty-todo-text h1 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.002em;
+    text-transform: capitalize;
+    white-space: nowrap;
+  }
+}
