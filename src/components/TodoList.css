@@ -61,6 +61,12 @@
   width: calc(100% - 80px);
 }
 
+@media only screen and (max-width: 768px) {
+  .todo-wrapper {
+    padding: 0 190px 0 80px;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .todo-wrapper {
     min-width: 360px;
