@@ -101,12 +101,16 @@
   }
 }
 
-@media only screen and (max-width: 410px) {
+@media only screen and (max-width: 420px) {
   .wrapper {
     min-width: 285px;
   }
 
   .todo-wrapper {
     min-width: 238px;
+  }
+
+  .empty-todo-text {
+    padding-left: 4px;
   }
 }

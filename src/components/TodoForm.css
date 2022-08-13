@@ -47,7 +47,7 @@
 
 .clear-text {
   position: absolute;
-  left: calc(100% - 138px);
+  left: calc(100% - 148px);
   top: 47px;
   width: 13.18px;
   height: 13.18px;
@@ -132,12 +132,17 @@
   }
 }
 
-@media only screen and (max-width: 410px) {
+@media only screen and (max-width: 420px) {
   .input-wrapper {
     min-width: 258px;
   }
 
   .todo-input-header {
     padding: 0;
+  }
+
+  .error {
+    top: 74px;
+    left: -13px;
   }
 }
