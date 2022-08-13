@@ -1,6 +1,7 @@
 .form-wrapper {
   max-width: 1141px;
   width: 100%;
+  margin-top: 83px;
 }
 
 .todo-input {
