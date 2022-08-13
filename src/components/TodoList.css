@@ -93,4 +93,18 @@
     text-transform: capitalize;
     white-space: nowrap;
   }
+
+  .hide-completed {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  .wrapper {
+    min-width: 285px;
+  }
+
+  .todo-wrapper {
+    min-width: 238px;
+  }
 }

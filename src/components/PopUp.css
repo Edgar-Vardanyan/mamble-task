@@ -45,3 +45,9 @@
   text-transform: capitalize;
   color: #174348;
 }
+
+@media only screen and (max-width: 410px) {
+  .box {
+    width: 262px;
+  }
+}

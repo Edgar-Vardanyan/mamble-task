@@ -82,6 +82,10 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .todo-input {
+    height: 44px;
+  }
+
   .clear-text {
     left: calc(100% - 26px);
   }
@@ -124,5 +128,15 @@
 
   .todo-input-header {
     padding-left: 8px;
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  .input-wrapper {
+    min-width: 258px;
+  }
+
+  .todo-input-header {
+    padding: 0;
   }
 }
