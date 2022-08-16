@@ -11,7 +11,7 @@ function Todo({ todos, completeTodo, removeTodo, togglePopup }) {
       <div key={todo.id} className="todo-text">
         <input
           type="checkbox"
-          onChange={() => completeTodo(todo.id)}
+          onChange={() => completeTodo(todo._id)}
           className="checkbox"
           checked={todo.completed}
         ></input>
@@ -20,7 +20,7 @@ function Todo({ todos, completeTodo, removeTodo, togglePopup }) {
 
       <div className="icon">
         <AiOutlineClose
-          onClick={() => togglePopup(todo.id)}
+          onClick={() => togglePopup(todo._id)}
           className="delete-icon"
         />
       </div>
