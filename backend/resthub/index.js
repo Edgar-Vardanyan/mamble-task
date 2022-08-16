@@ -1,18 +1,17 @@
+require('dotenv').config()
+
 // Import express
 const express = require('express');
 // Import Body parser
 
 // CORS 
-
 const cors = require('cors');
-
 
 const bodyParser = require('body-parser');
 // Import Mongoose
 const mongoose = require('mongoose');
 // Initialise the app
 const app = express();
-
 
 app.use(cors())
 
@@ -24,7 +23,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 // Connect to Mongoose and set connection variable
-mongoose.connect('mongodb://localhost/resthub', { useNewUrlParser: true});
+mongoose.connect(process.env.MONGO_CON_STRING, { useNewUrlParser: true});
 const db = mongoose.connection;
 
 // Added check for DB connection

@@ -53,7 +53,7 @@ function TodoList() {
     const checkBox = document.querySelector('input')
     try {
       const { data: response } = await axios.get(
-        "http://localhost:8080/api/options"
+        `${process.env.REACT_APP_API_URL}/options`
       );
       setOptionsData(response.data);
       setShowCompleted(response.data[0]['showCompleted'])
@@ -68,7 +68,7 @@ function TodoList() {
   const fetchData = async () => {
     try {
       const { data: response } = await axios.get(
-        "http://localhost:8080/api/todos"
+        `${process.env.REACT_APP_API_URL}/todos`
       );
       setData(response.data.reverse());
     } catch (error) {
@@ -83,7 +83,7 @@ function TodoList() {
     }
 
     await axios
-      .post("http://localhost:8080/api/todos", {
+      .post(`${process.env.REACT_APP_API_URL}/todos`, {
         text: todo.text,
         completed: todo.completed,
       })
@@ -97,7 +97,7 @@ function TodoList() {
   const completeTodo = async (id) => {
     const completedTodo = todoList.filter((todo) => todo._id === id);
 
-    await axios.put(`http://localhost:8080/api/todos/${id}`, {
+    await axios.put(`${process.env.REACT_APP_API_URL}/todos/${id}`, {
       text: completedTodo[0]["text"],
       completed: !completedTodo[0]["completed"],
     });
@@ -105,13 +105,13 @@ function TodoList() {
   };
 
   const removeTodo = async (id) => {
-    await axios.delete(`http://localhost:8080/api/todos/${id}`);
+    await axios.delete(`${process.env.REACT_APP_API_URL}/todos/${id}`);
     fetchData();
   };
 
   const handleShowCompleted = async () => {
     
-    await axios.put(`http://localhost:8080/api/options/${optionsData[0]["_id"]}`,{"showCompleted" : !optionsData[0]["showCompleted"]})
+    await axios.put(`${process.env.REACT_APP_API_URL}/options/${optionsData[0]["_id"]}`,{"showCompleted" : !optionsData[0]["showCompleted"]})
     fetchOptionsData()
     setShowCompleted(!optionsData[0]["showCompleted"]);
   };
